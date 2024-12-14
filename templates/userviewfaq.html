@@ -1,0 +1,51 @@
+  
+{% extends 'userbase.html' %}
+{% block body %}
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+           
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="min-height: 100vh;"  >
+                    
+                    <img class="position-absolute w-100 h-100" src="static/img/main3.jpg" style="object-fit: cover;" >
+                    
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        
+                        <h2 class="text-white">View FAQ</h2>
+                           
+                        <table class="table" style="background-color:white;color:black;border:2px solid black">
+                            <thead>
+                              <tr>
+                                <th> Question</th>
+                                <th> Answer </th>
+                           
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {% for row in rows %}
+                              <tr>
+                                <td>{{row['question']}}</td>
+                                <td>{{row['answer']}}</td>
+                               
+                          
+                              </tr> 
+                              {% endfor %}     
+                              
+                             
+                            </tbody>
+                          </table>
+                            </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+
+    {% endblock %}

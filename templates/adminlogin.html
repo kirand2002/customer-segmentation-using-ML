@@ -1,0 +1,37 @@
+  
+{% extends 'base.html' %}
+{% block body %}
+
+
+<center>
+    <div class="col-lg-6 py-5">
+        <div class="p-5 my-5" style="background: rgba(226, 128, 62, 0.7); border: 4px solid black; padding: 10px;box-shadow: 10px 15px #888888">
+            <h1 class="text-dark text-center mb-4">Admin Login</h1>
+            <form action="/adminloginNext" method="POST" >
+                <div class="form-row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="email" name="ausername" class="form-control bg-transparent p-4" placeholder="Your Email" required="required" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="password"  name="apassword" class="form-control bg-transparent p-4" placeholder="Password" required="required" />
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="form-row">
+                    <div class="col-sm-6">
+                   <button class="btn btn-success btn-block" type="submit" style="height: 47px;">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div></center>
+<!-- Service End -->
+
+
+    {% endblock %}

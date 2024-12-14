@@ -1,0 +1,50 @@
+  
+{% extends 'adminbase.html' %}
+{% block body %}
+
+       <!-- Carousel End -->
+       <center>
+        <div class="col-lg-6 py-5">
+            <div class="p-5 my-5" style="background:rgba(226, 128, 62, 0.7); border: 4px solid black; padding: 10px;box-shadow: 10px 15px #888888">
+                <h1 class="text-dark text-center mb-4">ADD FAQ</h1>
+                <form action="/addfaq" method="POST">
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" name="question" class="form-control bg-transparent p-4" placeholder="Your Question" required="required" />
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <textarea name="answer" class="form-control bg-transparent p-4" placeholder="Message" required="required" ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                  
+                   
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                       <button class="btn btn-success btn-block" type="submit" style="height: 47px;">SEND</button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+    <br>
+        <center>
+        <div class="section-title" >
+            {% if msg %}
+           <h4 style="color:rgb(24, 20, 20)">  {{msg}} </h4>
+            {% endif %}
+        </div>
+    </center> 
+            </div>
+        </div>
+    </div>
+    </div></center>
+    <!-- Service End -->
+ 
+
+
+
+    {% endblock %}

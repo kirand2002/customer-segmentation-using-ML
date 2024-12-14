@@ -1,0 +1,28 @@
+  
+{% extends 'base.html' %}
+{% block body %}
+
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 pb-5 pb-lg-0">
+                <img class="img-fluid w-100" src="static/img/main3.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">About Us</h6>
+                <h5 class="mb-4">This program employs image processing techniques to detect and highlight Customer-Segmentation areas in an aerial image. It begins by converting the image to grayscale and applying Gaussian blur to reduce noise. Adaptive thresholding is then used to segment the soil area from the background, considering variations in lighting conditions. Morphological operations like erosion and dilation further clean up the binary image, enhancing the detection of erosion areas. Contours of connected components in the binary image are identified, and only those with significant areas are retained, filtering out noise. These identified erosion areas are then highlighted by filling them with a specified color. Finally, the original image and the highlighted erosion areas are blended together to create a final visualization where the erosion regions are visually emphasized. Adjusting parameters like threshold values and contour area thresholds allows for customization based on the specific characteristics of the image being analyzed. Overall, the program provides a systematic approach to identifying and highlighting Customer-Segmentation, aiding in environmental analysis and management efforts.
+                     </h5>
+                <p class="pl-4 border-left border-primary"></p>
+                <div class="row pt-3">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+
+    {% endblock %}

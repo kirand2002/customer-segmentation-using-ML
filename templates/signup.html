@@ -1,0 +1,56 @@
+  
+{% extends 'base.html' %}
+{% block body %}
+
+
+<center>
+    <div class="col-lg-6 py-5">
+        <div class="p-5 my-5" style="background: rgba(226, 128, 62, 0.7); border: 4px solid black;  padding: 10px;box-shadow: 10px 15px #888888">
+            <h1 class="text-dark text-center mb-4">Sign Up</h1>
+            <form  action="/signup" method="POST">
+                <div class="form-row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-transparent p-4"   name="uname"placeholder="Your Name" required="required" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-transparent p-4"   name="uphone" placeholder="Phone Number" required="required" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="email" class="form-control bg-transparent p-4" name="username" placeholder="email" required="required" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="paswword" class="form-control bg-transparent p-4" name="upassword" placeholder="Password" required="required" />
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="form-row">
+                    <div class="col-sm-6">
+                   <button class="btn btn-success btn-block" type="submit" style="height: 47px;">Signup</button>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <center><div class="section-title" >
+              {% if msg %}
+             <h4 style="color:rgb(24, 20, 20)">  {{msg}} </h4>
+              {% endif %}
+        </div>
+      </center> 
+        </div>
+    </div>
+</div>
+</div></center>
+<!-- Service End -->
+
+
+    {% endblock %}
